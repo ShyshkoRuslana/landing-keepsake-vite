@@ -22,6 +22,7 @@
   "homepage": "https://github.com/ShyshkoRuslana/landing-keepsake-vite#readme",
   "devDependencies": {
     "@vituum/vite-plugin-pug": "^2.0.1",
+    "autoprefixer": "^10.6.2",
     "sass": "^1.108.2",
     "vite": "^8.3.8",
     "vituum": "^2.0.2"
