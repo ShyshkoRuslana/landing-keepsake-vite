@@ -18,7 +18,10 @@
   border: 1px solid var(--color-border);
   cursor: pointer;
   user-select: none;
-  transition: border-color $transition-base, color $transition-base, background-color $transition-base;
+  transition:
+    border-color $transition-base,
+    color $transition-base,
+    background-color $transition-base;
 
   &:hover {
     border-color: var(--color-accent);

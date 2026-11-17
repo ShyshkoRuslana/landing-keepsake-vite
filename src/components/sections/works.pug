@@ -1,17 +1,17 @@
-section#works.section.portfolio(aria-labelledby="works-title")
-    .container.portfolio__inner
-        //- Радіокнопки для CSS-фільтра (:checked ~); перша активна за індексом i === 0
-        each cat, i in categories
-            input.sr-only(type="radio" name="filter" id=cat.id checked=(i === 0))
+section#works.section.portfolio(aria-labelledby='works-title')
+  .container.portfolio__inner
+    //- Радіокнопки для CSS-фільтра (:checked ~); перша активна за індексом i === 0
+    each cat, i in categories
+      input.sr-only(type='radio', name='filter', id=cat.id, checked=i === 0)
 
-        .portfolio__head
-            h2#works-title.section-title Our awesome works
-            .chips(role="group" aria-label="Filter works")
-                each cat in categories
-                    label.chip(for=cat.id) #{cat.label}
+    .portfolio__head
+      h2#works-title.section-title Our awesome works
+      .chips(role='group', aria-label='Filter works')
+        each cat in categories
+          label.chip(for=cat.id) #{ cat.label }
 
-        .grid
-            each work in works
-                +work-card(work)
+    .grid
+      each work in works
+        +work-card(work)
 
-        +btn('Load more works', '#', 'secondary')(class="portfolio__more")
+    +btn('Load more works', '#', 'secondary').portfolio__more

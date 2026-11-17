@@ -1,16 +1,25 @@
-section#journal.section.journal(aria-labelledby="journal-title")
-    .container
-        h2#journal-title.section-title From the journal
-        p.lead Notes on process, case studies and things that inspire us.
-        ul.journal__list
-            each post in posts
-                li
-                    article.post
-                        +picture(post.image, '', 150, 150)(class="post__thumb")
-                        .post__body
-                            p.post__meta
-                                time(datetime=post.datetime) #{post.date}
-                                |  / #{post.category}
-                            h3.post__title #{post.title}
-                            p #{post.excerpt}
-                            a.more(href="#") Read more
+section#journal.section.journal(aria-labelledby='journal-title')
+  .container
+    h2#journal-title.section-title From the journal
+    p.lead Notes on process, case studies and things that inspire us.
+    ul.journal__list
+      each post in posts
+        li
+          article.post
+            +picture(post.image, '', 150, 150).post__thumb
+            .post__body
+              p.post__meta
+                time(datetime=post.datetime) #{ post.date }
+                |
+                | / #{ post.category }
+              h3.post__title #{ post.title }
+              p #{ post.excerpt } a.more(href="#") Read more
+              +picture({
+                name: post.image,
+                alt: post.alt,
+                width: 400,
+                height: 400,
+                sizes: '(min-width: 576px) 150px, 100vw',
+                className: 'post__thumb',
+                lazy: true,
+              })

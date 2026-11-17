@@ -4,6 +4,7 @@
   @include button-reset;
   @include flex-center(row, rem(8));
   @include focus-ring;
+
   padding: rem(13) rem(26);
   font-family: $font-heading;
   font-size: rem(13);
@@ -11,7 +12,10 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   border: 1px solid transparent;
-  transition: background-color $transition-base, border-color $transition-base, color $transition-base;
+  transition:
+    background-color $transition-base,
+    border-color $transition-base,
+    color $transition-base;
 
   &--primary {
     background-color: var(--color-accent);

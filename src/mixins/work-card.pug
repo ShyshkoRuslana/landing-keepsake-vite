@@ -1,11 +1,17 @@
-//- Картка роботи в сітці портфоліо
 mixin work-card(work)
-    article.card(data-category=work.category)
-        a.card__link(href=work.href || '#')
-            +picture(work.image, work.alt)
-            span.card__overlay
-                span.card__plus
-                    +icon('plus')
-                span.card__title #{work.title}
-                unless work.hideCategory
-                    span.card__cat #{work.catLabel}
+  article.card(data-category=work.category)
+    a.card__link(href=work.href || '#works')
+      +picture({
+        name: work.image,
+        alt: work.alt,
+        width: 800,
+        height: 632,
+        sizes: '(min-width: 1140px) 534px, (min-width: 768px) 50vw, 100vw',
+        className: 'card__img',
+        lazy: true,
+      })
+      .card__overlay
+        span.card__plus
+          +icon('plus', 18)
+        h3.card__title= work.title
+        span.card__cat= work.categoryLabel

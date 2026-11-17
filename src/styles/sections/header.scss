@@ -26,6 +26,7 @@
 
   &__mark {
     @include flex-center;
+
     width: rem(38);
     height: rem(38);
     margin-right: rem(3);
@@ -42,6 +43,7 @@
 
 .burger {
   @include flex-center;
+
   padding: rem(6);
   color: var(--color-dark);
   cursor: pointer;
@@ -146,6 +148,7 @@
 
 .fav {
   @include flex-center(row, rem(8));
+
   padding: rem(10) rem(18);
   font-family: $font-heading;
   font-size: rem(13);

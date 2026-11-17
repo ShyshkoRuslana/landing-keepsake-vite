@@ -5,6 +5,7 @@
 
   &__inner {
     @include flex-center(column, rem(24));
+
     text-align: center;
   }
 

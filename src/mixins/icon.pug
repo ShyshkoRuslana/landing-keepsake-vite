@@ -1,20 +1,20 @@
 //- Вибір префікса (#i- або #s-) та розміру за замовчуванням залежно від назви іконки
 mixin icon(name, size)
-    - let prefix = 'i'
-    - let defaultSize = 24
-    case name
-        when 'be'
-        when 'fb'
-        when 'tw'
-        when 'dr'
-        when 'pi'
-            - prefix = 's'
-        when 'web'
-        when 'motion'
-        when 'print'
-            - defaultSize = 40
-        when 'plus'
-            - defaultSize = 18
-    - const finalSize = size || defaultSize
-    svg(width=finalSize height=finalSize aria-hidden="true")
-        use(href=`#${prefix}-${name}`)
+  - let prefix = 'i';
+  - let defaultSize = 24;
+  case name
+    when 'be'
+    when 'fb'
+    when 'tw'
+    when 'dr'
+    when 'pi'
+      - prefix = 's';
+    when 'web'
+    when 'motion'
+    when 'print'
+      - defaultSize = 40;
+    when 'plus'
+      - defaultSize = 18;
+  - const finalSize = size || defaultSize;
+  svg(width=finalSize, height=finalSize, aria-hidden='true')
+    use(href=`#${prefix}-${name}`)

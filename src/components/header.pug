@@ -1,42 +1,42 @@
 header.site-header
-    .container.header__inner
-        a.logo(href="#top" aria-label="Keepsake — home")
-            span.logo__mark(aria-hidden="true") K
-            span.logo__text eepsake
+  .container.header__inner
+    a.logo(href='#top', aria-label='Keepsake — home')
+      span.logo__mark(aria-hidden='true') K
+      span.logo__text eepsake
 
-        //- Мобільне меню без JS: чекбокс + label
-        input#nav-toggle.nav-toggle(type="checkbox" aria-label="Toggle menu" aria-controls="menu")
-        label.burger(for="nav-toggle" aria-hidden="true")
-            svg.burger__open(width="24" height="24")
-                use(href="#i-menu")
-            svg.burger__close(width="24" height="24")
-                use(href="#i-close")
+    //- Мобільне меню без JS: чекбокс + label
+    input#nav-toggle.nav-toggle(type='checkbox', aria-label='Toggle menu', aria-controls='menu')
+    label.burger(for='nav-toggle', aria-hidden='true')
+      svg.burger__open(width='24', height='24')
+        use(href='#i-menu')
+      svg.burger__close(width='24', height='24')
+        use(href='#i-close')
 
-        nav#menu.menu(aria-label="Main")
-            ul.menu__list
-                each item in navItems
-                    li
-                        a.menu__link(
-                            href=item.href
-                            class={'is-active': item.active}
-                            aria-current=(item.active ? 'page' : false)
-                        ) #{item.label}
+    nav#menu.menu(aria-label='Main')
+      ul.menu__list
+        each item in navItems
+          li
+            a.menu__link(
+              href=item.href,
+              class={ 'is-active': item.active },
+              aria-current=item.active ? 'page' : false
+            ) #{ item.label }
 
-            +btn('Contact us', '#contact', 'primary')(class="menu__contact")
-                +icon('mail', 16)
+      +btn('Contact us', '#contact', 'primary').menu__contact
+        +icon('mail', 16)
 
-            a.fav(href="#")
-                +icon('heart', 16)
-                span.fav__text Favourites
+      a.fav(href='#')
+        +icon('heart', 16)
+        span.fav__text Favourites
 
-            .menu__info
-                p.menu__label Get help
-                address
-                    | hello@keepsake.studio
-                    br
-                    | +44 20 7946 0000
-                ul.socials
-                    each soc in socials
-                        li
-                            a.social(style=`--c:${soc.color}` href=soc.href aria-label=soc.label)
-                                +icon(soc.icon)
+      .menu__info
+        p.menu__label Get help
+        address
+          | hello@keepsake.studio
+          br
+          | +44 20 7946 0000
+        ul.socials
+          each soc in socials
+            li
+              a.social(style=`--c:${soc.color}`, href=soc.href, aria-label=soc.label)
+                +icon(soc.icon)

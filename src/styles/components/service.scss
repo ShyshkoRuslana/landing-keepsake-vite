@@ -2,12 +2,14 @@
 
 .service {
   @include flex-center(column);
+
   text-align: center;
   max-width: rem(420);
   margin-inline: auto;
 
   &__icon {
     @include flex-center;
+
     width: rem(96);
     height: rem(96);
     margin-bottom: rem(20);

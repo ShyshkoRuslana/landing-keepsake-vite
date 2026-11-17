@@ -28,7 +28,11 @@ img {
 a {
   color: inherit;
   text-decoration: none;
-  transition: color $transition-base, background-color $transition-base, border-color $transition-base;
+  transition:
+    color $transition-base,
+    background-color $transition-base,
+    border-color $transition-base;
+
   @include focus-ring;
 }
 

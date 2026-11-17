@@ -28,8 +28,10 @@
   &__overlay {
     position: absolute;
     inset: 0;
+
     @include flex-center(column);
-    background-color: rgba(34, 34, 38, 0.78);
+
+    background-color: rgb(34 34 38 / 78%);
     opacity: 0;
     transition: opacity $transition-base;
 
@@ -41,6 +43,7 @@
 
   &__plus {
     @include flex-center;
+
     width: rem(42);
     height: rem(42);
     margin-bottom: rem(14);
