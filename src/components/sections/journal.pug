@@ -1,25 +1,68 @@
-section#journal.section.journal(aria-labelledby='journal-title')
+section#journal.section.journal
   .container
-    h2#journal-title.section-title From the journal
+    h2.section-title From the journal
     p.lead Notes on process, case studies and things that inspire us.
-    ul.journal__list
-      each post in posts
-        li
-          article.post
-            +picture(post.image, '', 150, 150).post__thumb
-            .post__body
-              p.post__meta
-                time(datetime=post.datetime) #{ post.date }
-                |
-                | / #{ post.category }
-              h3.post__title #{ post.title }
-              p #{ post.excerpt } a.more(href="#") Read more
-              +picture({
-                name: post.image,
-                alt: post.alt,
-                width: 400,
-                height: 400,
-                sizes: '(min-width: 576px) 150px, 100vw',
-                className: 'post__thumb',
-                lazy: true,
-              })
+    .journal__list
+      article.post
+        +picture({
+          name: '1',
+          alt: 'Sollicitudin tortor inceptos',
+          width: 400,
+          height: 400,
+          sizes: '(min-width: 576px) 150px, 100vw',
+          className: 'post__thumb',
+          lazy: true,
+        })
+        .post__body
+          p.post__meta Jul 12, 2026 / Identity
+          h3.post__title Sollicitudin tortor inceptos
+          p Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes.
+          a.more(href='#') Read more
+
+      article.post
+        +picture({
+          name: '2',
+          alt: 'Amet inceptos fringilla fusce',
+          width: 400,
+          height: 400,
+          sizes: '(min-width: 576px) 150px, 100vw',
+          className: 'post__thumb',
+          lazy: true,
+        })
+        .post__body
+          p.post__meta Aug 23, 2026 / Branding
+          h3.post__title Amet inceptos fringilla fusce
+          p Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes.
+          a.more(href='#') Read more
+
+      article.post
+        +picture({
+          name: '3',
+          alt: 'Cursus malesuada justo',
+          width: 400,
+          height: 400,
+          sizes: '(min-width: 576px) 150px, 100vw',
+          className: 'post__thumb',
+          lazy: true,
+        })
+        .post__body
+          p.post__meta Sep 19, 2026 / Identity
+          h3.post__title Cursus malesuada justo
+          p Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes.
+          a.more(href='#') Read more
+
+      article.post
+        +picture({
+          name: '4',
+          alt: 'Ornare cursus bibendum purus',
+          width: 400,
+          height: 400,
+          sizes: '(min-width: 576px) 150px, 100vw',
+          className: 'post__thumb',
+          lazy: true,
+        })
+        .post__body
+          p.post__meta Sep 27, 2026 / Branding
+          h3.post__title Ornare cursus bibendum purus
+          p Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes.
+          a.more(href='#') Read more
