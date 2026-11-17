@@ -1,0 +1,29 @@
+@use '../abstracts' as *;
+
+.section-title {
+  display: inline-flex;
+  align-items: center;
+  gap: rem(14);
+  font-family: $font-heading;
+  font-size: rem(22);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-dark);
+
+  &::after {
+    content: '';
+    width: rem(18);
+    height: 2px;
+    background-color: var(--color-accent);
+  }
+
+  &--light {
+    color: var(--color-bg-light);
+  }
+
+  @include mq(md) {
+    font-size: rem(24);
+  }
+}

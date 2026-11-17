@@ -1,0 +1,23 @@
+@use '../abstracts' as *;
+
+.stat {
+  @include flex-center(column);
+
+  &__num {
+    font-family: $font-heading;
+    font-size: rem(42);
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--color-dark);
+  }
+
+  &__label {
+    margin-top: rem(6);
+    font-family: $font-heading;
+    font-size: rem(11);
+    line-height: 1.2;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+}

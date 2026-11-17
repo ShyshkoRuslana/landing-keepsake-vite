@@ -1,0 +1,29 @@
+extends ../layouts/main
+
+//- Підключаємо масиви даних
+
+
+//- Додаємо SEO та Open Graph мета-теги до блоку meta макета
+append meta
+    meta(name="description" content="Keepsake is a digital and branding agency specialising in web design, posters and motion video.")
+    meta(property="og:type" content="website")
+    meta(property="og:title" content="Keepsake — digital & branding agency")
+    meta(property="og:description" content="Specializing in web design, poster, motion video, based in London.")
+
+//- Підключаємо Google Fonts перед основними стилями
+prepend styles
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:wght@300;400;700&family=Oswald:wght@300;400;700&display=swap" rel="stylesheet")
+
+block title
+    | Keepsake — digital &amp; branding agency
+
+block content
+    include ../components/sections/hero
+    include ../components/sections/works
+    include ../components/sections/cta
+    include ../components/sections/services
+    include ../components/sections/stats
+    include ../components/sections/clients
+    include ../components/sections/journal

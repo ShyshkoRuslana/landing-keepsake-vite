@@ -1,0 +1,10 @@
+//- Кнопка або посилання з підтримкою вкладеного вмісту (block) та довільних атрибутів (&attributes)
+mixin btn(text, href, variant = 'primary')
+    if href
+        a.btn(class=`btn--${variant}` href=href)&attributes(attributes)
+            block
+            | #{text}
+    else
+        button.btn(class=`btn--${variant}`)&attributes(attributes)
+            block
+            | #{text}

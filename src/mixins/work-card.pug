@@ -1,0 +1,11 @@
+//- Картка роботи в сітці портфоліо
+mixin work-card(work)
+    article.card(data-category=work.category)
+        a.card__link(href=work.href || '#')
+            +picture(work.image, work.alt)
+            span.card__overlay
+                span.card__plus
+                    +icon('plus')
+                span.card__title #{work.title}
+                unless work.hideCategory
+                    span.card__cat #{work.catLabel}

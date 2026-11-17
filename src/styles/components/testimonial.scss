@@ -1,0 +1,83 @@
+@use '../abstracts' as *;
+
+.testimonial {
+  padding: rem(28) rem(24);
+  background-color: var(--color-bg-light);
+
+  @include mq(md) {
+    padding: rem(40) rem(44);
+  }
+
+  &__mark {
+    display: block;
+    margin-bottom: rem(12);
+    font-family: Georgia, serif;
+    font-size: rem(48);
+    line-height: 0.8;
+    color: var(--color-accent);
+  }
+
+  &__text p {
+    font-size: rem(16);
+    font-weight: 300;
+    line-height: 1.65;
+    color: var(--color-dark);
+
+    @include mq(md) {
+      font-size: rem(18);
+    }
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    gap: rem(14);
+    margin-top: rem(26);
+  }
+
+  &__who {
+    display: flex;
+    flex-direction: column;
+    font-size: rem(13);
+
+    strong {
+      font-family: $font-heading;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--color-dark);
+    }
+
+    span {
+      color: var(--color-muted);
+    }
+  }
+}
+
+.avatar {
+  @include flex-center;
+  flex-shrink: 0;
+  width: rem(38);
+  height: rem(38);
+  border-radius: 50%;
+  background-color: var(--color-mint);
+  color: var(--color-white);
+  font-family: $font-heading;
+  font-size: rem(13);
+}
+
+.dots {
+  display: inline-flex;
+  gap: rem(6);
+  margin-left: auto;
+
+  i {
+    width: rem(16);
+    height: 2px;
+    background-color: var(--color-border);
+
+    &.is-on {
+      background-color: var(--color-accent);
+    }
+  }
+}

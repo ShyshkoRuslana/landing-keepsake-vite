@@ -1,0 +1,33 @@
+include ../data/navigation
+include ../data/works
+include ../data/content
+
+include ../mixins/icon
+include ../mixins/btn
+include ../mixins/picture
+include ../mixins/work-card
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        block meta
+        title
+            block title
+                | Keepsake
+        block styles
+            link(rel="stylesheet" href="/src/styles/main.scss")
+    body#top
+        include ../components/svg-sprite
+        include ../components/header
+
+        main
+            block content
+
+        include ../components/footer
+
+        a.to-top(href="#top" aria-label="Back to top")
+            +icon('up', 20)
+
+        block scripts

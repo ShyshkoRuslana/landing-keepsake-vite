@@ -1,0 +1,21 @@
+@use '../abstracts' as *;
+
+.container {
+  width: 100%;
+  max-width: $container-width;
+  margin-inline: auto;
+  padding-inline: rem(24);
+}
+
+.section {
+  padding-block: rem(56);
+
+  @include mq(md) {
+    padding-block: rem(76);
+  }
+}
+
+.lead {
+  margin-top: rem(10);
+  color: var(--color-muted);
+}

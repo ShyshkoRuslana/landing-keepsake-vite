@@ -1,0 +1,84 @@
+@use '../abstracts' as *;
+
+.newsletter {
+  width: 100%;
+  max-width: rem(380);
+
+  &__text {
+    margin-bottom: rem(16);
+    color: var(--color-muted);
+  }
+
+  &__row {
+    display: flex;
+
+    .btn {
+      flex-shrink: 0;
+      padding-inline: rem(22);
+    }
+  }
+}
+
+.field {
+  flex: 1;
+
+  input {
+    width: 100%;
+    height: rem(44);
+    padding-inline: rem(14);
+    font-family: $font-body;
+    font-size: rem(14);
+    color: var(--color-white);
+    background-color: var(--color-surface-dark);
+    border: 1px solid transparent;
+    outline: none;
+
+    &::placeholder {
+      color: var(--color-muted);
+    }
+
+    &:focus {
+      border-color: var(--color-accent);
+    }
+
+    &:not(:placeholder-shown):invalid ~ .error {
+      display: block;
+    }
+  }
+}
+
+.error {
+  display: none;
+  margin-top: rem(6);
+  font-size: rem(12);
+  color: var(--color-accent);
+}
+
+.consent {
+  display: inline-flex;
+  align-items: center;
+  gap: rem(8);
+  margin-top: rem(14);
+  font-size: rem(13);
+  color: var(--color-muted);
+  cursor: pointer;
+
+  input {
+    accent-color: var(--color-accent);
+    width: rem(15);
+    height: rem(15);
+  }
+}
+
+.success {
+  display: none;
+  margin-top: rem(12);
+  padding: rem(10) rem(14);
+  background-color: rgba(86, 200, 184, 0.15);
+  color: var(--color-mint);
+  font-size: rem(13);
+
+  &:target {
+    display: block;
+  }
+}

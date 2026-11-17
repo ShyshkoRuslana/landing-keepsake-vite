@@ -1,0 +1,21 @@
+@use '../abstracts' as *;
+
+.to-top {
+  position: fixed;
+  right: rem(24);
+  bottom: rem(24);
+  z-index: 90;
+  @include flex-center;
+  width: rem(44);
+  height: rem(44);
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  box-shadow: 0 rem(4) rem(12) rgba(0, 0, 0, 0.18);
+  transition: background-color $transition-base, transform $transition-base;
+
+  &:hover {
+    background-color: var(--color-accent-hover);
+    transform: translateY(-2px);
+  }
+}

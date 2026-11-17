@@ -1,0 +1,6 @@
+mixin picture(name, alt, width = 640, height = 506, eager = false)
+    picture
+        if eager
+            img(src=`/img/${name}.jpg` width=width height=height alt=alt)&attributes(attributes)
+        else
+            img(src=`/img/${name}.jpg` width=width height=height alt=alt loading="lazy")&attributes(attributes)

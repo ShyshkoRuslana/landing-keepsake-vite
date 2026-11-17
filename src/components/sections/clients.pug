@@ -1,0 +1,20 @@
+section.section.clients(aria-labelledby="clients-title")
+    .container
+        h2#clients-title.section-title Clients &amp; kind words
+        p.lead Some of the teams that trusted us with their brands.
+        ul.clients__list
+            each client, i in clients
+                li.client(class=`client--${i + 1}`) #{client}
+
+        figure.testimonial
+            span.testimonial__mark(aria-hidden="true") “
+            blockquote.testimonial__text
+                p #{testimonial.quote}
+            figcaption.testimonial__author
+                span.avatar(aria-hidden="true") #{testimonial.initials}
+                span.testimonial__who
+                    strong #{testimonial.author}
+                    span #{testimonial.role}
+                span.dots(aria-hidden="true")
+                    each _, idx in [0, 1, 2]
+                        i(class={'is-on': idx === 0})

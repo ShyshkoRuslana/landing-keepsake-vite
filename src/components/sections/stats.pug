@@ -1,0 +1,7 @@
+section.section.stats(aria-label="Studio in numbers")
+    .container
+        ul.stats__list
+            each stat in stats
+                li.stat
+                    span.stat__num #{stat.num}
+                    span.stat__label #{stat.label}

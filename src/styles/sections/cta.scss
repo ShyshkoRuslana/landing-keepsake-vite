@@ -1,0 +1,20 @@
+@use '../abstracts' as *;
+
+.cta {
+  padding: rem(20) 0 rem(60);
+
+  &__inner {
+    @include flex-center(column, rem(24));
+    text-align: center;
+  }
+
+  &__title {
+    font-family: $font-heading;
+    font-size: clamp(rem(24), 3.2vw, rem(30));
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--color-dark);
+  }
+}

@@ -1,0 +1,21 @@
+@use '../abstracts' as *;
+
+.socials {
+  display: flex;
+  gap: rem(10);
+}
+
+.social {
+  @include flex-center;
+  width: rem(32);
+  height: rem(32);
+  border-radius: 50%;
+  background-color: var(--c);
+  color: var(--color-white);
+  transition: transform $transition-base, opacity $transition-base;
+
+  &:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+  }
+}

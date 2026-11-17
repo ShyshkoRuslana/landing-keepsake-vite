@@ -1,0 +1,27 @@
+@use '../abstracts' as *;
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem(8);
+}
+
+.chip {
+  padding: rem(8) rem(16);
+  font-family: $font-heading;
+  font-size: rem(12);
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-dark);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  user-select: none;
+  transition: border-color $transition-base, color $transition-base, background-color $transition-base;
+
+  &:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
+}

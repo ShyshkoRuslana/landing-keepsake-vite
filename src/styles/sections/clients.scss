@@ -1,0 +1,14 @@
+@use '../abstracts' as *;
+
+.clients__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: rem(36) rem(24);
+  align-items: center;
+  justify-items: center;
+  margin-block: rem(52);
+
+  @include mq(md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

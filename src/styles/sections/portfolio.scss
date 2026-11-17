@@ -1,0 +1,45 @@
+@use '../abstracts' as *;
+
+$categories: all, branding, identity, print, web, motion;
+$filterable: branding, identity, print, web, motion;
+
+.portfolio {
+  &__head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(20);
+    margin-bottom: rem(36);
+  }
+
+  &__more {
+    display: flex;
+    width: fit-content;
+    margin: rem(44) auto 0;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(24);
+
+  @include mq(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@each $cat in $categories {
+  [id='f-#{$cat}']:checked ~ .portfolio__head [for='f-#{$cat}'] {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-white);
+  }
+}
+
+@each $cat in $filterable {
+  [id='f-#{$cat}']:checked ~ .grid .card:not([data-category='#{$cat}']) {
+    display: none;
+  }
+}

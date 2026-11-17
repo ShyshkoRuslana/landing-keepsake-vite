@@ -1,0 +1,44 @@
+@use '../abstracts' as *;
+
+.client {
+  font-size: rem(20);
+  line-height: 1;
+  color: var(--color-muted);
+  user-select: none;
+
+  &--1 {
+    font-family: $font-heading;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+  }
+
+  &--2 {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: rem(22);
+  }
+
+  &--3 {
+    font-family: $font-heading;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+  }
+
+  &--4 {
+    font-family: $font-body;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  &--5 {
+    font-family: $font-heading;
+    font-weight: 400;
+    letter-spacing: 0.28em;
+  }
+
+  &--6 {
+    font-family: $font-body;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+  }
+}
